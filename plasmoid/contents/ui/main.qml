@@ -411,7 +411,7 @@ Item {
                 plasmoid.action('next').enabled = mpris2.canGoNext
             }
 
-            plasmoid.setAction('stop', i18n('Stop'), 'media-playback-stopped')
+            plasmoid.setAction('stop', i18n('Stop'), 'media-playback-stop')
             plasmoid.setAction('quit', i18n('Quit'), 'application-exit')
 
             // enable/disable actions
