@@ -40,16 +40,16 @@ PlaybackItem {
         id: playmodel
 
         ListElement {
-            icon: '16-16-media-skip-backward'
+            icon: 'media-skip-backward'
         }
         ListElement {
-            icon: 'media-playback-playing'
+            icon: 'media-playback-start'
         }
         ListElement {
-            icon: 'media-playback-stopped'
+            icon: 'media-playback-stop'
         }
         ListElement {
-            icon: '16-16-media-skip-forward'
+            icon: 'media-skip-forward'
         }
     }
 
@@ -88,8 +88,8 @@ PlaybackItem {
                     item.clicked.connect(mpris2.playPause)
                     item.enabled = Qt.binding(function () { return mpris2.canPlayPause })
                     item.iconSource = Qt.binding(function() {
-                        return mpris2.playing ? 'media-playback-paused'
-                                              : 'media-playback-playing'
+                        return mpris2.playing ? 'media-playback-pause'
+                                              : 'media-playback-start'
                     })
                     //NOTE: update icon playing state
                     break
