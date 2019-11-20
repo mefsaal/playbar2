@@ -251,7 +251,7 @@ Item {
         id: compactIconOnly
         PlasmaCore.IconItem {
             id: iconLayout
-            source: mpris2.playing ? 'media-playback-start' : 'media-playback-pause'
+            source: mpris2.playing ? 'media-playback-playing' : 'media-playback-paused'
 
             MediaPlayerArea {
                 anchors.fill: parent
@@ -340,7 +340,7 @@ Item {
 
         property string icon: mpris2.sourceActive ? mpris2.icon(mpris2.currentSource)
                                                   : mpris2.recentSources.length > 0
-                                                    ? mpris2.recentSources[0].icon : 'media-playback-start'
+                                                    ? mpris2.recentSources[0].icon : 'media-playback-playing'
 
         property string cover: mpris2.artUrl !== '' ? Qt.resolvedUrl(mpris2.artUrl)
                                                     : ''
@@ -396,14 +396,14 @@ Item {
             plasmoid.setAction('raise', i18n('Open %1', mpris2.identity), icon)
 
             if (playbarEngine.compactStyle !== playbar.playbackButtons) {
-                plasmoid.setAction('previous', i18n('Play previous track'), 'media-skip-backward')
+                plasmoid.setAction('previous', i18n('Play previous track'), '16-16-media-skip-backward')
 
                 if (mpris2.playing)
-                    plasmoid.setAction('playPause', i18n('Pause'), 'media-playback-pause')
+                    plasmoid.setAction('playPause', i18n('Pause'), 'media-playback-paused')
                 else
-                    plasmoid.setAction('playPause', i18n('Play'), 'media-playback-start')
+                    plasmoid.setAction('playPause', i18n('Play'), 'media-playback-playing')
 
-                plasmoid.setAction('next', i18n('Play next track'), 'media-skip-forward')
+                plasmoid.setAction('next', i18n('Play next track'), '16-16-media-skip-forward')
 
                 // enable/disable actions
                 plasmoid.action('previous').enabled = mpris2.canGoPrevious
@@ -411,7 +411,7 @@ Item {
                 plasmoid.action('next').enabled = mpris2.canGoNext
             }
 
-            plasmoid.setAction('stop', i18n('Stop'), 'media-playback-stop')
+            plasmoid.setAction('stop', i18n('Stop'), 'media-playback-stopped')
             plasmoid.setAction('quit', i18n('Quit'), 'application-exit')
 
             // enable/disable actions

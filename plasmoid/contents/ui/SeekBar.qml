@@ -51,7 +51,7 @@ PlaybackItem {
                 svg: PlasmaCore.Svg {
                     imagePath: 'icons/media'
                 }
-                iconSource: mpris2.playing ? 'media-playback-pause' : 'media-playback-start'
+                iconSource: mpris2.playing ? 'media-playback-paused' : 'media-playback-playing'
                 enabled: mpris2.sourceActive
 
                 size: minWidth

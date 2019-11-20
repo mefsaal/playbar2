@@ -43,10 +43,10 @@ IconWidget {
 
         function playbackIcon() {
             if (mpris2.playbackStatus === 'Playing')
-                return 'media-playback-start'
+                return 'media-playback-playing'
             else if (mpris2.playbackStatus === 'Paused')
-                return 'media-playback-pause'
-            return 'media-playback-start'
+                return 'media-playback-paused'
+            return 'media-playback-playing'
         }
     }
 

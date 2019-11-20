@@ -66,7 +66,7 @@ RowLayout {
                 onClicked: action_raise()
             }
             PlasmaComponents.MenuItem {
-                icon: 'media-playback-stop'
+                icon: 'media-playback-stopping'
                 text: i18n('Stop')
                 onClicked: action_stop()
             }
