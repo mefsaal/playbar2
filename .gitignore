@@ -32,3 +32,5 @@ build/
 *.user
 
 *.autosave
+.vscode/settings.json
+engine/ui_generalconfig.py
