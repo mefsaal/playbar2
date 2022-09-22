@@ -105,7 +105,7 @@ msgstr "Mostrar botón de stop"
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowSeekSlider)
 #: ../../rc.cpp:45
 msgid "Show seek slider"
-msgstr "Mostrar barra de búsqueda"
+msgstr "Mostrar control deslizante"
 
 #. i18n: file: ../../engine/generalconfig.ui:269
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowVolumeSlider)
@@ -233,3 +233,29 @@ msgstr "Conmutar la ventana del reproductor"
 
 #~ msgid "Nor&mal"
 #~ msgstr "Norm&al"
+
+
+msgid "Track Info Format:"
+msgstr "Formato de la información de la pista:"
+
+msgid "Fixed Size"
+msgstr "Tamaño fijo"
+
+msgid "Default"
+msgstr "Predeterminado"
+
+msgid "Artist - Track"
+msgstr "Artista - Pista"
+
+msgid "Track - Artist"
+msgstr "Pista - Artista"
+
+msgid "Track"
+msgstr "Pista"
+
+msgid "Track by Artist"
+msgstr "Pista por artista"
+
+msgid "Show play/pause button"
+msgstr "Mostrar botón reproducir/pausar"
+
